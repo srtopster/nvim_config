@@ -10,8 +10,10 @@ vim.g.neovide_scale_factor = 0.75
 --Muda a fonte
 vim.o.guifont = "FiraCode Nerd Font Mono:h14"
 
---Muda do cmd para o powershell
-vim.o.shell = "powershell -NoLogo"
+--Muda do cmd para o powershell (se estiver no windows)
+if vim.fn.has("win32") then
+  vim.o.shell = "powershell -NoLogo"
+end
 
 --mudar zoom neovide com ctrl + = e ctrl + -
 if vim.g.neovide then
