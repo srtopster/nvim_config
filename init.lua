@@ -11,7 +11,7 @@ vim.g.neovide_scale_factor = 0.75
 vim.o.guifont = "FiraCode Nerd Font Mono:h14"
 
 --Muda do cmd para o powershell (se estiver no windows)
-if vim.fn.has("win32") then
+if vim.fn.has("win32") == 1 then
   vim.o.shell = "powershell -NoLogo"
 end
 
