@@ -1,7 +1,7 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
---disabilita a formatação ao salvar
+--desabilita a formatação ao salvar
 vim.g.autoformat = false
 
 --escala boa
@@ -14,6 +14,9 @@ vim.o.guifont = "FiraCode Nerd Font Mono:h14"
 if vim.fn.has("win32") == 1 then
   vim.o.shell = "powershell -NoLogo"
 end
+
+-- Habilita corretor pt_br para ativar usar `set spell`
+vim.opt.spelllang = { 'pt_br' }
 
 --mudar zoom neovide com ctrl + = e ctrl + -
 if vim.g.neovide then
